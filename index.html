@@ -16,34 +16,40 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
     <header>
         <nav class="container">
             <a href="#" class="logo">Port<span>folio.</span></a>
             <div class="links">
                 <ul>
                     <li>
-                        <a href="#" class="nav-link">Home</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Services</a>
+                        <a href="#services" class="nav-link">Services</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Portfolio</a>
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
                 <i class="uil uil-moon toggle-btn"></i>
             </div>
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <!-- <i class="uil uil-moon toggle-btn"></i> -->
         </nav>
     </header>
 
     <main>
-        <section class="showcase-area">
+        <section class="showcase-area" id="home">
             <div class="container">
                 <div class="showcase-info">
                     <h3 class="sub-heading">Computer Engineering</h3>
@@ -51,7 +57,7 @@
                     <p class="text">My name is Papsi.</p>
                     <div class="cta">
                         <a href="mailto:papsi41papsi@gmail.com" class="btn">Contact me</a>
-                        <a href="./assets/Thanasit-Pansuk-Resume.pdf" download class="btn secondary-btn">Download CV</a>
+                        <a href="./assets/Thanasit_Pansuk_Resume.pdf" download class="btn secondary-btn">Download CV</a>
                     </div>
                 </div>
                 <div class="showcase-image">
@@ -60,7 +66,7 @@
             </div>
         </section>
 
-        <section class="about section">
+        <section class="about section" id="about">
             <div class="container">
                 <div class="about-grid">
                     <div class="about-card">
@@ -93,10 +99,11 @@
                 <div class="about-info">
                     <h3 class="sub-heading">About me</h3>
                     <h1 class="heading">Better Project,<br> better experiences</h1>
-                    <p class="text">I Love You.</p>
+                    <p class="text">My name is Papsi.
+                    </p>
                     <div class="cta">
                         <a href="mailto:papsi41papsi@gmail.com" class="btn">Contact me</a>
-                        <a href="./assets/60109010527_en.pdf" download class="btn secondary-btn">Download CV</a>
+                        <a href="./assets/Thanasit_Pansuk_Resume.pdf" download class="btn secondary-btn">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -110,7 +117,7 @@
                         <h1 class="heading">Let me help you</h1>
                         <div class="box-desc">
                             <p class="text">
-                                i come from phatthalung
+                                I am a fresh graduate little experience But I continued to train myself.
                             </p>
                             <a href="#" class="btn">Hire me</a>
                         </div>
@@ -216,11 +223,11 @@
             </div>
         </section>
 
-        <section class="services section">
+        <section class="services section" id="services">
             <div class="container">
                 <div class="service-info">
                     <h3 class="sub-heading">My sewrvices</h3>
-                    <h1 class="haeding">Things I may do for mt clients</h1>
+                    <h1 class="heading">Things I may do for mt clients</h1>
                     <p class="text">
                         I can help you.
                     </p>
@@ -284,7 +291,26 @@
             </div>
         </section>
 
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
+            <div class="model">
+                <div class="modal-overlay"></div>
+                <div class="slider-warp">
+                    <div class="prev-btn navigation">
+                        <i class="uil uil-angle-left-b"></i>
+                    </div>
+                    <div class="images">
+                        <img class="showImage" src="./assets/Dashbord1.jpg">
+                        <img src="./assets/Dashbord2.jpg">
+                        <img src="./assets/Action1.jpg">
+                        <img src="./assets/Action2.jpg">
+                        <img src="./assets/Action3.jpg">
+                        <img src="./assets/ระบบตรวจจับ แจ้งเตือนและป้องกัน DoS Attack_page-0001.jpg">
+                    </div>
+                    <div class="next-btn navigation">
+                        <i class="uil uil-angle-right-b"></i>
+                    </div>
+                </div>
+            </div>
             <div class="container">
                 <div class="portfolio-header">
                     <div class="portfolio-title">
@@ -292,61 +318,109 @@
                         <h1 class="heading">Latest Projects</h1>
                     </div>
                     <div class="filter-btns">
-                        <button class="filter-btn">All</button>
-                        <button class="filter-btn">Product</button>
-                        <button class="filter-btn">Web App</button>
-                        <button class="filter-btn">Interacting</button>
+                        <button class="filter-btn" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter=".product">Product</button>
+                        <button class="filter-btn" data-filter=".web">Web App</button>
+                        <button class="filter-btn" data-filter=".inter">Interacting</button>
                     </div>
                 </div>
                 <div class="portfolio-gallery">
-                    <div class="prt-card">
+                    <div class="mix prt-card web">
                         <div class="prt-image">
                             <img src="./assets/Dashbord1.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>DoS Dashbord1</h3>
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card web">
                         <div class="prt-image">
                             <img src="./assets/Dashbord2.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>DoS Dashbord1</h3>
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card web">
                         <div class="prt-image">
                             <img src="./assets/Action1.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>DoS Ban Action</h3>
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card product">
                         <div class="prt-image">
                             <img src="./assets/Action2.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Line Notification Status=403</h3>
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card product">
                         <div class="prt-image">
                             <img src="./assets/Action3.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>Line Notification Status=200</h3>
                             <a href="#" class="btn secondary-btn sm">Read more</a>
                         </div>
                     </div>
-                    <div class="prt-card">
+                    <div class="mix prt-card inter">
                         <div class="prt-image">
                             <img src="./assets/ระบบตรวจจับ แจ้งเตือนและป้องกัน DoS Attack_page-0001.jpg" alt="">
+                            <div class="prt-overlay">
+                                <span class="prt-icon zoom-icon" style="--i: 0s">
+                                    <i class="uil uil-search-plus"></i>
+                                </span>
+                                <a href="#" class="prt-icon" style="--i: 0.15s">
+                                    <i class="uil uil-link-h"></i>
+                                </a>
+                            </div>
                         </div>
                         <div class="prt-desc">
                             <h3>DoS Paper</h3>
@@ -356,12 +430,57 @@
                 </div>
             </div>
         </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <div class="contact-info">
+                    <h3 class="sub-heading">Contact me</h3>
+                    <h1 class="heading">Let's work together</h1> 
+                    <p class="text">
+                        Go to work.
+                    </p>
+                    <a href="mailto:papsi41papsi@gmail.com" class="mail">papsi41papsi@gmail.com<i class="uil uil-arrow-right"></i></a>
+                </div>
+
+                <form action="index.html" class="contact-form">
+                    <h3>Send me a message</h3>
+                    <input type="text" class="form-input" placeholder="You name" required>
+                    <input type="email" class="form-input" placeholder="You Email" required>
+                    <textarea placeholder="Project Details" class="form-input" required></textarea>
+                    <input type="submit" value="Send" class="btn">
+                </form>
+            </div>
+        </section>
+
     </main>
 
-    <!-- <section style="height: 1000px"></section> -->
+    <footer>
+        <div class="container">
+            <a href="#" class="logo">Port<span>folio.</span></a>
+            <p class="text">&copy; Copyright 2022. All rights reverves</p>
+            <ul class="social-media">
+                <li>
+                    <a href="#" class="social-link">
+                    <i class="uil uil-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link">
+                    <i class="uil uil-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link">
+                    <i class="uil uil-dribbble"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- --------- JavaScript Files --------- -->
 
+    <script src="./js/mixitup.min.js"></script>
     <script src="./js/app.js"></script>
 
 </body>
